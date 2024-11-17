@@ -1,15 +1,37 @@
-# My Portfolio #
-Written in vanilla js.
+# Portfolio Website
 
-If you have any questions you can message me on discord **elias.dev.**
-*PS. I'm sure there are a lot of typos and bugs, so pull requests and forks are welcome*  
 
-**FIGMA**: https://www.figma.com/community/file/1164933568884615740  
-**LIVE**: [eliasdevis.github.io](https://eliasdevis.github.io/)
 
-## TODO ##
-- [ ] Page contacts
-- [ ] Blog maybe
-- [ ] Animation
-- [ ] Improve images
-- [ ] Delete unused code
+
+## Table of Contents
+
+- [About the Project](#about-the-project)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Customization](#customization)
+- [Example Portfolios](#example-portfolios)
+- [Contributing](#contributing)
+- [License](#license)
+- [Attribution](#attribution-appreciated-but-not-required)
+- [Contact](#contact)
+
+## Project Structure
+
+- `index.html`: The main page of the portfolio website.
+- `about-me.html`: The about me page.
+- `skill-set.html`: The skillset page.
+- `portfolio.html`: The portfolio page.
+- `style.css`: The main CSS file for styling.
+- `style-about-me.css`: CSS file specific to the about me page.
+- `style-portfolio.css`: CSS file specific to the portfolio page.
+- `assets/`: Directory containing project images and assets.
+
+## Dark Mode Support
+
+Now featuring dark mode support! The portfolio website automatically adapts to your system's color scheme preference.
+
+
+
+
+
