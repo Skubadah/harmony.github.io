@@ -1,207 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Review this part and modify it to your liking -->
-    <meta name="description" content="Sample text for portfolio template meta tag">
-    <meta name="keywords" content="Sample text for portfolio template meta tag">
-    <meta name="author" content="Sample text for portfolio template meta tag">
-    <title>My portfolio website</title>
-    <!-- Adding favicon for older and modern browsers,
-        It is best to add favicon to the main folder, 
-        I used an only ico converter for best result,
-        Do not forget to clear you cache to see the changes -->
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Damage Price Calculator</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f4f4f9;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        background: #fff;
+        padding: 30px 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        max-width: 450px;
+        width: 100%;
+        text-align: center;
+    }
+    .logo {
+        display: block;
+        margin: 0 auto 20px auto;
+        width: 120px;
+        border-radius: 10px;
+    }
+    h1, h2 {
+        color: #333;
+    }
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    .button-group {
+        display: flex;
+        flex-wrap: nowrap; /* Keep buttons in one line */
+        gap: 5px; /* Space between buttons */
+        justify-content: space-between; /* Evenly distribute buttons */
+        margin-bottom: 10px;
+    }
+    .button-group button {
+        margin: 0; /* Remove individual button margins */
+        padding: 6px 8px; /* Smaller padding */
+        font-size: 12px; /* Smaller font size */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background: #ff4081;
+        color: #fff;
+        transition: 0.2s;
+        flex: 1; /* Equal width for all buttons */
+        text-align: center;
+    }
+    .button-group button:hover {
+        background: #e73370;
+    }
+    .button-group button.active {
+        background: #6a1b9a;
+    }
+    label {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    .parts-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    .part-item {
+        flex: 1 1 28%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .part-item input {
+        width: 80px;
+        padding: 5px;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    .result {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 24px;
+        color: #ff4081;
+        transition: color 0.3s;
+    }
+</style>
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
-        <label for="drop" class="toggle" id="main-toggle">
-            <span class="nav-icon"></span>
-        </label>
-        <input type="checkbox" id="drop">
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-me.html">About me</a></li>
-            <li><a href="skill-set.html">Skill-set</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="#contact-me">Contact me</a></li>
-        </ul>
-    </nav>
+<div class="container">
+    <img src="https://i.postimg.cc/W4B5bZBk/logo1.jpg" alt="Logo" class="logo">
+    <h1>Damage Price Calculator</h1>
 
-    <!-- introduction -->
-    <header class="grid-system-2 w-900 padding">
-        <section class="align-center">
-            <h1 class="medium-spacing">Hello, I am </h1>
-            <h1 class="large">Ubadah</h1>
-            <p class="justify">Im a web developer with a passion for creating clean, responsive websites.
-                Skilled in front-end and back-end technologies, I focus on delivering seamless user experiences and solving complex problems. Always eager to learn and grow, 
-                I enjoy collaborating on projects that make a real impact.  </p>
-        </section>
-        <section class="center align-center">
-            <img class="header-img max-width max-height" src="assets/profile-pic.png" alt="profile-picture">
-        </section>
-    </header>
+    <h2>Body Damage</h2>
+    <div class="button-group" id="bodyButtons">
+        <button onclick="toggleBody(235, this)" aria-label="Minor Body Damage">Minor</button>
+        <button onclick="toggleBody(379, this)" aria-label="Moderate Body Damage">Moderate</button>
+        <button onclick="toggleBody(470, this)" aria-label="Heavy Body Damage">Heavy</button>
+        <button onclick="toggleBody(561, this)" aria-label="Severe Body Damage">Severe</button>
+        <button onclick="toggleBody(705, this)" aria-label="Extreme Body Damage">Extreme</button>
+    </div>
 
+    <h2>Engine Damage</h2>
+    <div class="button-group" id="engineButtons">
+        <button onclick="toggleEngine(235, this)" aria-label="Minor Engine Damage">Minor</button>
+        <button onclick="toggleEngine(379, this)" aria-label="Moderate Engine Damage">Moderate</button>
+        <button onclick="toggleEngine(470, this)" aria-label="Heavy Engine Damage">Heavy</button>
+        <button onclick="toggleEngine(561, this)" aria-label="Severe Engine Damage">Severe</button>
+        <button onclick="toggleEngine(705, this)" aria-label="Extreme Engine Damage">Extreme</button>
+    </div>
 
-    <!-- quote -->
-    <article class="baby-pink">
-        <p class="quote uppercase">Love to Code, enjoy playing Pokemmo, Love to create identity.</p>
-        <p>Every line of code brings you one step closer to turning your ideas into reality. Keep pushing, and you'll build something amazing!.</p>
-    </article>
+    <h2>Parts & Discount</h2>
+    <div class="parts-container">
+        <div class="part-item">
+            <label for="doors">Doors</label>
+            <input type="number" id="doors" value="0" min="0" oninput="updateTotal()" aria-label="Number of Doors">
+        </div>
+        <div class="part-item">
+            <label for="windows">Windows</label>
+            <input type="number" id="windows" value="0" min="0" oninput="updateTotal()" aria-label="Number of Windows">
+        </div>
+        <div class="part-item">
+            <label for="tires">Tires</label>
+            <input type="number" id="tires" value="0" min="0" oninput="updateTotal()" aria-label="Number of Tires">
+        </div>
+        <div class="part-item">
+            <label for="motorOil">Motor Oil</label>
+            <input type="number" id="motorOil" value="0" min="0" oninput="updateTotal()" aria-label="Number of Motor Oil Units">
+        </div>
+        <div class="part-item">
+            <label for="advanced">Advanced</label>
+            <input type="number" id="advanced" value="0" min="0" oninput="updateTotal()" aria-label="Number of Advanced Units">
+        </div>
+        <div class="part-item">
+            <label for="discount">Disc %</label>
+            <input type="number" id="discount" value="0" min="0" max="100" oninput="updateTotal()" aria-label="Discount Percentage">
+        </div>
+    </div>
 
-    <!-- about me -->
-    <!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
-    <section class="wrapper">
-        <section class="margin-auto">
-            <img class="max-width max-height" src="assets/about-me.png" alt="about-me-logo">
-        </section>
-        <section class="justify align-center">
-            <p class="bold">About me</p>
-            <p>Here you may write something captivating and exciting about yourself, so that everyone wants to use that
-                button below.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolor officia nulla in culpa
-                necessitatibus maiores natus quae adipisci magnam. Voluptas voluptatibus voluptatem est fugiat,
-                provident incidunt perferendis fuga soluta?.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius obcaecati labore pariatur quisquam veniam,
-                assumenda consectetur asperiores accusamus fugit. </p>
-            <p class="padding-top"><a href="about-me.html" class="button-outline">More info</a></p>
-        </section>
-    </section>
+    <div class="result" id="result">$0</div>
+</div>
 
-    <!-- skills -->
-    <!-- use this to showcase your skills, if you make changes, do not forget to modify the css accordingly -->
-    <section>
-        <h3 class="main-title center padding">Skills</h3>
-    </section>
-    <section class="wrapper">
-        <section class="column">
-            <p class="padding-bottom">Technical skills</p>
-            <section class="skills">
-                <ul class="no-bullet-list no-padding-list-item">
-                    <li>
-                        <p>html</p>
-                        <span class="progress-bar"><span class="html"></span></span>
-                    </li>
-                    <li>
-                        <p>css</p>
-                        <span class="progress-bar"><span class="css"></span></span>
-                    </li>
-                    <li>
-                        <p>javascript</p>
-                        <span class="progress-bar"><span class="javascript"></span></span>
-                    </li>
-                    <li>
-                        <p>php, mysql</p>
-                        <span class="progress-bar"><span class="php"></span></span>
-                    </li>
-                </ul>
-            </section>
-        </section>
-        <section class="column">
-            <p class="padding-bottom">Professional skills</p>
-            <section class="skills">
-                <ul class="no-bullet-list no-padding-list-item">
-                    <li>
-                        <p>communication</p>
-                        <span class="progress-bar"><span class="comm-adapt"></span></span>
-                    </li>
-                    <li>
-                        <p>teamplayer, adaptability</p>
-                        <span class="progress-bar"><span class="team-player"></span></span>
-                    </li>
-                    <li>
-                        <p>problem solving</p>
-                        <span class="progress-bar"><span class="problem-solving"></span></span>
-                    </li>
-                    <li>
-                        <p>open-minded</p>
-                        <span class="progress-bar"><span class="open-minded"></span></span>
-                    </li>
-                </ul>
-            </section>
-        </section>
-    </section>
-    </section>
+<script>
+    let bodyDamage = 0;
+    let engineDamage = 0;
 
-    <!-- Projects -->
-    <!-- If you have more projects you are working on at the moment, or just want to show more, double the whole section below without the title and you are good to go -->
-    <section>
-        <h3 class="main-title center padding">Projects I am currently working on</h3>
-    </section>
-    <section class="wrapper">
-        <section class="column card justify flex">
-            <img class="box" src="assets/project1.png" alt="project1">
-            <p class="padding bold center">Project my portfolio</p>
-            <p>Project description here.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium totam, iusto recusandae, repudiandae
-                molestias adipisci perferendis, beatae quia voluptates aspernatur consequatur minima? Maiores neque
-                ullam explicabo, autem molestiae velit delectus?</p>
-            <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Portfolio</a></p>
-        </section>
-        <section class="column card justify flex">
-            <img class="box" src="assets/project2.png" alt="project2">
-            <p class="padding bold center">Project landing page</p>
-            <p>Project description here.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dignissimos facilis molestias, laborum
-                repellendus delectus accusantium, laboriosam aut cupiditate culpa eum animi deleniti nostrum quibusdam
-                consequatur eos in exercitationem dolores!</p>
-            <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Portfolio</a></p>
-        </section>
+    function toggleBody(price, btn) {
+        if (bodyDamage === price) {
+            bodyDamage = 0;
+            btn.classList.remove('active');
+        } else {
+            bodyDamage = price;
+            setActiveButton(btn, 'bodyButtons');
+        }
+        updateTotal();
+    }
 
-    </section>
+    function toggleEngine(price, btn) {
+        if (engineDamage === price) {
+            engineDamage = 0;
+            btn.classList.remove('active');
+        } else {
+            engineDamage = price;
+            setActiveButton(btn, 'engineButtons');
+        }
+        updateTotal();
+    }
 
-    <!-- contact me -->
-    <!-- Five logo can be in one row, and if it still not enough, you can create another row, buy doubleing the "box-contact" section -->
-    <section id="contact-me" class="grid-system-2 w-900 padding">
-        <section class="margin-auto">
-            <img class="max-width max-height" src="assets/Contact-me-img.png" alt="contact-me-illustration">
-        </section>
-        <section class="margin-auto align-center">
-            <h1 class="medium-spacing center">Let's get in touch!<span></span></h1>
-            <section class="box-contact margin-auto padding-top">
-                <span>
-                    <a href="https://www.linkedin.com/in/ubadah-islam/" target="_blank"><img class="logo" src="assets/linkedin.png"
-                            alt=""></a>
-                </span>
-                <span>
-                    <a href="https://github.com/UbadaHMG" target="_blank"><img class="logo" src="assets/github.png" alt=""></a>
-                </span>
-                <span>
-                    <a href="skubadahislam@gmail.com" target="_blank"><img class="logo" src="assets/email.png" alt=""></a>
-                </span>
-            </section>
-        </section>
-    </section>
+    function setActiveButton(btn, groupId) {
+        const group = document.getElementById(groupId);
+        Array.from(group.children).forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    }
 
-    <!-- special thanks -->
-    <!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
+    function updateTotal() {
+        const parts = ['doors', 'windows', 'tires', 'motorOil', 'advanced'];
+        const prices = [88, 54, 20, 700, 700]; // Updated prices from user data
 
+        let partsTotal = 0;
 
-    <!-- footer -->
-    <!-- waits for you to take over! -->
-    <footer>@ubadahmg 2024</footer>
+        parts.forEach((id, idx) => {
+            const input = document.getElementById(id);
+            const val = Math.max(0, parseInt(input.value) || 0); // Prevent negative values
+            input.value = val; // Update input
+            const cost = val * prices[idx];
+            partsTotal += cost;
+        });
+
+        const discountInput = document.getElementById('discount');
+        let discount = parseFloat(discountInput.value) || 0;
+        discount = Math.max(0, Math.min(100, discount)); // Restrict to 0–100%
+        discountInput.value = discount; // Update input
+
+        let total = bodyDamage + engineDamage + partsTotal;
+        let discountAmount = (total * discount) / 100;
+        let finalTotal = total - discountAmount;
+
+        const result = document.getElementById('result');
+        if (finalTotal === 0) {
+            result.style.color = 'gray';
+        } else {
+            result.style.color = '#ff4081';
+        }
+        result.innerText = `$${Math.round(finalTotal)}`; // Round to whole number
+    }
+</script>
 </body>
-
 </html>
